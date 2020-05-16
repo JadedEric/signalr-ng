@@ -69,6 +69,12 @@ There are other ways to compose up and build, use the correct command at your di
 
 
 
+## How to access the web sites after starting the container
+
+Access to the API image is through the reverse proxy, and can be found by launching http://localhost/weatherforecast (the default .net core 3.1 controller) and http://localhost:81/ to access the Angular project once the containers have been started up.
+
+
+
 ## Docker-compose
 
 I'm quickly going to run through the docker-compose.yml here. Outlined in the YAML file is our interpretation of a compose up script and might not be correct to most of the readers. We encourage feedback if something we're doing makes no sense, or can be done better.
