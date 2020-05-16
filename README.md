@@ -73,7 +73,9 @@ There are other ways to compose up and build, use the correct command at your di
 
 Access to the API image is through the reverse proxy, and can be found by launching http://localhost/weatherforecast (the default .net core 3.1 controller) and http://localhost:81/ to access the Angular project once the containers have been started up.
 
+Docker dashboard in Windows produces the following screenshot:
 
+<img src="https://cdn.peculiaritydigital.com/github/images/docker-dashboard.png" />
 
 ## Docker-compose
 
