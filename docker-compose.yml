@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+    reverseproxy:
+        build:
+            context: ./api/nginx
+            dockerfile: nginx.dockerfile
+        ports:
+            - "80:80"
+        restart: always
+
+    api:
+        depends_on:
+            - reverseproxy
+        build:
+            context: ./api/SignalRApi
+            dockerfile: api.dockerfile
+        expose:
+            - "5000"
+        restart: always
+
+    web:
+        build:
+            context: ./web/
+            dockerfile: ng.dockerfile
+        ports:
+            - "81:80"
+        restart:
+            always
